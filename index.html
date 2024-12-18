@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Football Team</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 id="team"></h1>
+    <h2 id="sport"></h2>
+    <p>World Cup Year: <span id="year"></span></p>
+    <p>Head Coach: <span id="head-coach"></span></p>
+  </header>
+
+  <main>
+    <section>
+      <label for="players">Filter Players:</label>
+      <select id="players">
+        <option value="all">All Players</option>
+        <option value="nickname">With Nicknames</option>
+        <option value="forward">Forwards</option>
+        <option value="midfielder">Midfielders</option>
+        <option value="defender">Defenders</option>
+        <option value="goalkeeper">Goalkeepers</option>
+      </select>
+    </section>
+
+    <section id="player-cards">
+      <!-- Player cards will be generated here dynamically -->
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
