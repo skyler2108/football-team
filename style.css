@@ -1,61 +1,145 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --dark-grey: #0a0a23;
+  --light-grey: #f5f6f7;
+  --white: #ffffff;
+  --black: #000;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
+  background-color: var(--dark-grey);
+  text-align: center;
+  padding: 10px;
+}
+
+.title,
+.options-label,
+.team-stats,
+footer {
+  color: var(--white);
+}
+
+.title {
+  margin: 1.3rem 0;
+}
+
+.team-stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-size: 1.3rem;
+  margin: 1.2rem 0;
+}
+
+.options-label {
+  font-size: 1.2rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-card {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  padding: 1.3rem;
+  margin: 1.2rem;
+  width: 540px;
+  height: 540px;
+  background-color: #000;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .team-stats {
+    flex-direction: column;
   }
-  
-  header {
-    text-align: center;
-    background-color: #0066cc;
-    color: #fff;
-    padding: 1rem 0;
-  }
-  
-  header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-  }
-  
-  header h2, header p {
-    margin: 0.5rem 0;
-  }
-  
-  main {
-    padding: 2rem;
-  }
-  
-  label {
-    font-weight: bold;
-  }
-  
-  select {
-    padding: 0.5rem;
-    margin: 1rem 0;
-  }
-  
-  #player-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  
-  .player-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    width: calc(33.333% - 1rem);
-    box-sizing: border-box;
-  }
-  
-  .player-card h2 {
-    font-size: 1.25rem;
-    margin: 0 0 0.5rem;
-  }
-  
-  .player-card p {
-    margin: 0.25rem 0;
-  }
+}
+
+#goalkeeper{
+    background-image: url(./images/goalkeeper.jpg);
+    background-position: bottom center;
+    background-size: 100% 150px;
+    background-repeat: no-repeat;
+}
+#forward{
+    background-position: bottom center;
+    background-size: 100% 150px;
+    background-repeat: no-repeat;
+}
+#midfielder{
+    background-image: url(./images/midfielder.jpg);
+    background-position: bottom center;
+    background-size: 100% 150px;
+    background-repeat: no-repeat;
+}
+#defender{
+    background-image: url(./images/defender.jpg);
+    background-position: bottom center;
+    background-size: 100% 150px;
+    background-repeat: no-repeat;
+}
+.decor{
+  height: 560px;
+  width: 560px;
+  margin-left: -20px;
+  margin-top: -20px;
+}
+
+.mask{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(196, 196, 196, 0.1);
+  backdrop-filter: grayscale(100%);
+}
+.badge{
+  position: relative;
+  width: 272px;
+  height: 433.5px;
+  position: absolute;
+  background-image: url(./images/badge.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.bar{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 75px;
+  height: 190px;
+  background: #ffffff;
+  top: 29px;
+  left: 22.5px;
+}
+.photo{
+  position: relative;
+  width: 272px;
+  height: 230px;
+}
+.photo img{
+  position: absolute;
+  width: 100%;
+  top: 52px;
+  left: 0;
+}
+
+table{
+  width: 272px;
+  padding-inline: 41px;
+}
